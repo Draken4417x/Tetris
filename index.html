@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tetris Mobile</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <audio id="background-music" loop>
+    <source src="assets/sounds/background-song.mp3" type="audio/mp3">
+    Seu navegador não suporta o elemento de áudio
+  </audio>
+  <h1>Tetris</h1>
+  <div class="tetris-container">
+    <div id="grid"></div>
+    <div class="info">
+      <h2>Pontuação</h2>
+      <p id="level-game">Nível 1</p>
+      <p id="score">0</p>
+      <button id="start-button"><i class="fas fa-play"></i> Iniciar</button>
+      <input type="range" id="volume-control" min="0" max="1" step="0.01"
+         value="0.5">
+      <div id="high-scores"></div>
+    </div>
+  </div>
+  
+
+  <div class="controls">
+  <button onclick="moveLeft()"><i class="fas fa-arrow-left"></i></button>
+  <button onclick="rotate()"><i class="fas fa-undo"></i></button>
+  <button onclick="moveRight()"><i class="fas fa-arrow-right"></i></button>
+  <button onclick="moveDown()"><i class="fas fa-arrow-down"></i></button>
+</div>
+  
+  <div id="game-over-popup" class="popup hidden">
+    <div class="popup-content">
+      <h2>Fim de Jogo</h2>
+      <p id="final-score"></p>
+      <button id="restart-button">Jogar Novamente</button>
+      <audio id="game-over-sound" src="assets/sounds/game-over.mp3"></audio>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
